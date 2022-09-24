@@ -42,7 +42,7 @@ public class FullView : MonoBehaviour
     
     private void ShowOutline(Material outLineMat)
     {
-        outLineMat.SetFloat("_Thickness", 2);
+        outLineMat.SetFloat("_Thickness", 1);
     }
 
     private void HideOutline(Material outLineMat)
@@ -53,20 +53,20 @@ public class FullView : MonoBehaviour
     public void ClickHome()
     {
         ShowOutline(outLineMaterials[0]);
-        //HideOutline(outLineMaterials[1]);
-        //(outLineMaterials[2]);
+        HideOutline(outLineMaterials[1]);
+        HideOutline(outLineMaterials[2]);
     }
     public void ClickSquare()
     {
         ShowOutline(outLineMaterials[1]);
-        //HideOutline(outLineMaterials[0]);
-        //HideOutline(outLineMaterials[2]);
+        HideOutline(outLineMaterials[0]);
+        HideOutline(outLineMaterials[2]);
     }
 
     public void ClickMine()
     {
         ShowOutline(outLineMaterials[2]);
-        //HideOutline(outLineMaterials[0]);
-        //HideOutline(outLineMaterials[1]);
+        HideOutline(outLineMaterials[0]);
+        HideOutline(outLineMaterials[1]);
     }
 }
